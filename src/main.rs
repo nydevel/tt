@@ -1,3 +1,6 @@
+use tt;
+
 fn main() {
-    println!("Hello, world!");
+    println!("This is test {}", "ff");
+    tt::init();
 }
