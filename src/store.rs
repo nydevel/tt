@@ -11,8 +11,11 @@ pub mod config {
     }
 
     fn config_dir_check() {
-        let mut home_dir = super::home_dir().unwrap();
+        let home_dir = super::home_dir().unwrap();
         let path = super::Path::new(&home_dir);
+        if !path.is_dir() {
+            condifg_dir_init();
+        }
     }
     fn condifg_dir_init() {
         let mut home_dir = super::home_dir().unwrap();
@@ -21,6 +24,7 @@ pub mod config {
     }
 }
 
+#[allow(dead_code)]
 pub mod actions {
     pub fn save() {}
 }
