@@ -1,8 +1,7 @@
 mod store;
 
-pub use store::store2;
+pub use store::config;
 
 pub fn init() {
-    let result = store2::save();
-    println!("Result is: {:?}", result);
+    config::init();
 }
