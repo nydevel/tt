@@ -11,13 +11,16 @@ pub mod config {
     }
 
     fn config_dir_check() {
-        let home_dir = super::home_dir().unwrap();
+        let mut home_dir = super::home_dir().unwrap();
+        home_dir.push(super::DEFAULT_DIR);
         let path = super::Path::new(&home_dir);
+        
         if !path.is_dir() {
-            condifg_dir_init();
+            config_dir_init();
         }
     }
-    fn condifg_dir_init() {
+
+    fn config_dir_init() {
         let mut home_dir = super::home_dir().unwrap();
         home_dir.push(super::DEFAULT_DIR);
         super::fs::create_dir_all(home_dir).expect("Can't create settings directory in homedir");
