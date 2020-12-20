@@ -10,6 +10,7 @@ pub mod config {
         config_dir_check();
     }
 
+    // Check if dir exist, create if not
     fn config_dir_check() {
         let mut home_dir = super::home_dir().unwrap();
         home_dir.push(super::DEFAULT_DIR);
@@ -20,6 +21,7 @@ pub mod config {
         }
     }
 
+    // Create config dir
     fn config_dir_init() {
         let mut home_dir = super::home_dir().unwrap();
         home_dir.push(super::DEFAULT_DIR);
