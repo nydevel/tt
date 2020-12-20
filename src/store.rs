@@ -29,7 +29,4 @@ pub mod config {
     }
 }
 
-#[allow(dead_code)]
-pub mod actions {
-    pub fn save() {}
-}
+
