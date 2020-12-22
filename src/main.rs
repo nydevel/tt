@@ -10,7 +10,7 @@ fn main() {
     tt::init();
 
     if command == "start" {
-        println!("Timer starte!");
+        tt::start();
     }
 }
 
