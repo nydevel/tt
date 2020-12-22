@@ -1,5 +1,6 @@
 use dirs::home_dir;
 use std::fs;
+use std::fs::File;
 use std::path::Path;
 
 const DEFAULT_DIR: &str = ".tt";
@@ -29,4 +30,12 @@ pub mod config {
     }
 }
 
+pub mod orm{
+    pub fn save(){
+        let mut file_path = super::home_dir().unwrap();
+        file_path.push(super::DEFAULT_DIR);
+        file_path.push("testfile");
 
+        super::File::create(file_path).unwrap();
+    }
+}

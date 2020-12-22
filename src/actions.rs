@@ -1,5 +1,8 @@
+pub use store::orm;
+
 pub mod action{
     pub fn start () -> i32{
+
         return 1;
     }
 }
