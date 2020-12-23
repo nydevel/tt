@@ -31,10 +31,10 @@ pub mod config {
 }
 
 pub mod orm{
-    pub fn save(){
+    pub fn create(name: &str){
         let mut file_path = super::home_dir().unwrap();
         file_path.push(super::DEFAULT_DIR);
-        file_path.push("testfile");
+        file_path.push(name);
 
         super::File::create(file_path).unwrap();
     }

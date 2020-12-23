@@ -1,9 +1,8 @@
-pub use store::orm;
+pub use super::store::orm;
 
 pub mod action{
-    pub fn start () -> i32{
-
-        return 1;
+    pub fn start (){
+        super::orm::create("test");
     }
 }
 
