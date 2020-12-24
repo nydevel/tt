@@ -1,8 +1,8 @@
-use chrono::{Utc};
 pub use super::store::orm;
+use chrono::Utc;
 
-pub mod action{
-    pub fn start (){
+pub mod action {
+    pub fn start() {
         let now = super::Utc::now().format("%Y-%m-%d %H:%M:%S").to_string();
         super::orm::create(&now);
     }

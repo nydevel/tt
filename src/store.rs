@@ -16,7 +16,7 @@ pub mod config {
         let mut home_dir = super::home_dir().unwrap();
         home_dir.push(super::DEFAULT_DIR);
         let path = super::Path::new(&home_dir);
-        
+
         if !path.is_dir() {
             config_dir_init();
         }
@@ -30,8 +30,8 @@ pub mod config {
     }
 }
 
-pub mod orm{
-    pub fn create(name: &String){
+pub mod orm {
+    pub fn create(name: &String) {
         let mut file_path = super::home_dir().unwrap();
         file_path.push(super::DEFAULT_DIR);
         file_path.push(name);

@@ -1,8 +1,8 @@
-mod store;
 mod actions;
+mod store;
 
-pub use store::config;
 pub use actions::action;
+pub use store::config;
 
 pub fn init() {
     config::init();
