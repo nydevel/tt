@@ -5,6 +5,9 @@ use std::path::Path;
 
 const DEFAULT_DIR: &str = ".tt";
 
+/**
+ * Configuring store
+ */
 pub mod config {
     //Ceate directory for app settign and saves
     pub fn init() {
@@ -30,7 +33,13 @@ pub mod config {
     }
 }
 
+/**
+ * Working with file system and files
+ */
 pub mod orm {
+    /**
+     * Create file with timestamp in name
+     */
     pub fn create(name: &String) {
         let mut file_path = super::home_dir().unwrap();
         file_path.push(super::DEFAULT_DIR);
